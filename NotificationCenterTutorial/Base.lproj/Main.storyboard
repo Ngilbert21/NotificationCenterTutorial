@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fz7-0h-QfB">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +10,160 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="NotificationCenterTutorial" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="haz-yS-TMj">
+                                <rect key="frame" x="126" y="154" width="163" height="29"/>
+                                <state key="normal" title="Pick Your Favorite Color"/>
+                                <connections>
+                                    <action selector="pickColorButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9Z6-dN-vDO"/>
+                                    <segue destination="xO0-uR-v5p" kind="show" identifier="doSegue" id="6d2-ag-KJ8"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="870-St-dxP">
+                                <rect key="frame" x="20" y="437" width="375" height="22"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="870-St-dxP" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="4OM-Os-BYg"/>
+                            <constraint firstItem="haz-yS-TMj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="126" id="6Qa-m4-kqS"/>
+                            <constraint firstItem="haz-yS-TMj" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="66" id="6YZ-fN-HIp"/>
+                            <constraint firstItem="870-St-dxP" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="KxQ-aS-exU"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="haz-yS-TMj" secondAttribute="trailing" constant="125" id="WsC-Y8-1MR"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="870-St-dxP" secondAttribute="bottom" constant="403" id="dV5-QI-mTI"/>
+                            <constraint firstItem="870-St-dxP" firstAttribute="top" secondItem="haz-yS-TMj" secondAttribute="bottom" constant="254" id="ehU-J3-7I6"/>
+                            <constraint firstItem="870-St-dxP" firstAttribute="centerX" secondItem="haz-yS-TMj" secondAttribute="centerX" id="zlv-iV-u3p"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="89L-o5-3oM"/>
+                    <connections>
+                        <outlet property="titleLabel" destination="870-St-dxP" id="Dz4-Ub-huZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1042.0289855072465" y="120.53571428571428"/>
+        </scene>
+        <!--Second View Controller-->
+        <scene sceneID="DEE-4f-r2d">
+            <objects>
+                <viewController id="xO0-uR-v5p" customClass="SecondViewController" customModule="NotificationCenterTutorial" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="csy-0M-318">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="IWY-5H-fSY">
+                                <rect key="frame" x="56" y="433" width="285" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QeX-36-ZuD">
+                                        <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                                        <state key="normal" title="Red"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="tag">
+                                                <integer key="value" value="0"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="colorDidTap:" destination="xO0-uR-v5p" eventType="touchUpInside" id="adY-LL-ubu"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9lN-Sj-i7p">
+                                        <rect key="frame" x="50" y="0.0" width="42" height="30"/>
+                                        <state key="normal" title="Green"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="tag">
+                                                <integer key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="colorDidTap:" destination="xO0-uR-v5p" eventType="touchUpInside" id="sT6-Qr-Vk0"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fnu-mg-ng9">
+                                        <rect key="frame" x="112" y="0.0" width="44" height="30"/>
+                                        <state key="normal" title="Yellow"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="tag">
+                                                <integer key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="colorDidTap:" destination="xO0-uR-v5p" eventType="touchUpInside" id="oRp-FS-9WX"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gK3-aq-pRS">
+                                        <rect key="frame" x="176" y="0.0" width="51" height="30"/>
+                                        <state key="normal" title="Orange"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="tag">
+                                                <integer key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="colorDidTap:" destination="xO0-uR-v5p" eventType="touchUpInside" id="3Zf-7X-9Us"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0sg-ZM-qT6">
+                                        <rect key="frame" x="247" y="0.0" width="38" height="30"/>
+                                        <state key="normal" title="Black"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="tag">
+                                                <integer key="value" value="4"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="colorDidTap:" destination="xO0-uR-v5p" eventType="touchUpInside" id="0da-ID-EEG"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="tag">
+                                        <integer key="value" value="0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="gkR-cE-oHU" firstAttribute="trailing" secondItem="IWY-5H-fSY" secondAttribute="trailing" constant="73" id="4XW-n6-rRc"/>
+                            <constraint firstItem="IWY-5H-fSY" firstAttribute="top" secondItem="gkR-cE-oHU" secondAttribute="top" constant="345" id="9CL-1g-CJf"/>
+                            <constraint firstItem="gkR-cE-oHU" firstAttribute="bottom" secondItem="IWY-5H-fSY" secondAttribute="bottom" constant="399" id="MWC-bO-0GS"/>
+                            <constraint firstItem="IWY-5H-fSY" firstAttribute="leading" secondItem="gkR-cE-oHU" secondAttribute="leading" constant="56" id="ZAi-ci-vlq"/>
+                            <constraint firstItem="IWY-5H-fSY" firstAttribute="leading" secondItem="gkR-cE-oHU" secondAttribute="leading" constant="56" id="eFW-ft-btr"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="gkR-cE-oHU"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="UC4-3X-Iut"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZMD-7v-2Yg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1698.5507246376812" y="122.54464285714285"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="S8H-w5-Odj">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fz7-0h-QfB" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="1Z5-Dv-jpX">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="ivp-72-63B"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7tg-QU-uVD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="120.53571428571428"/>
         </scene>
     </scenes>
 </document>

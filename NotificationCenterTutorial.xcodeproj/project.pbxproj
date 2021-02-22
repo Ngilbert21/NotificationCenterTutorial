@@ -13,6 +13,7 @@
 		ECEB61DA25E4124A0021670B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECEB61D825E4124A0021670B /* Main.storyboard */; };
 		ECEB61DC25E4124C0021670B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ECEB61DB25E4124C0021670B /* Assets.xcassets */; };
 		ECEB61DF25E4124C0021670B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECEB61DD25E4124C0021670B /* LaunchScreen.storyboard */; };
+		ECEB61E725E4180C0021670B /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECEB61E625E4180C0021670B /* SecondViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		ECEB61DB25E4124C0021670B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ECEB61DE25E4124C0021670B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ECEB61E025E4124C0021670B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ECEB61E625E4180C0021670B /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				ECEB61D425E4124A0021670B /* SceneDelegate.swift */,
 				ECEB61D625E4124A0021670B /* ViewController.swift */,
 				ECEB61D825E4124A0021670B /* Main.storyboard */,
+				ECEB61E625E4180C0021670B /* SecondViewController.swift */,
 				ECEB61DB25E4124C0021670B /* Assets.xcassets */,
 				ECEB61DD25E4124C0021670B /* LaunchScreen.storyboard */,
 				ECEB61E025E4124C0021670B /* Info.plist */,
@@ -138,6 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ECEB61E725E4180C0021670B /* SecondViewController.swift in Sources */,
 				ECEB61D725E4124A0021670B /* ViewController.swift in Sources */,
 				ECEB61D325E4124A0021670B /* AppDelegate.swift in Sources */,
 				ECEB61D525E4124A0021670B /* SceneDelegate.swift in Sources */,
